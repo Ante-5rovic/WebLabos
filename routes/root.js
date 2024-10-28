@@ -22,9 +22,9 @@ router.get("^/$|/index(.html)?", async (req, res) => {
   });
 });
 
-router.get("/ticket-form", async (req, res) => {
+/*router.get("/ticket-form", async (req, res) => {
   res.render("addTicket", {});
-});
+});*/
 
 router.post("/kupnja-ulaznice", checkAuth, async (req, res) => {
   const vatin = req.body.vatin;
