@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Counter</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="index-main-wrap">
+        <%- include('partials/header') %>
+        <% if (numberOfTickets != null) { %>
+            <div class="circle-counter-wrap">
+                <div class="circle">
+                    <span id="counter"><%= numberOfTickets %></span>
+                </div>
+            </div>
+        <% } %>
+        <% if (QRKod != null) { %>     
+            <!--<img src="<%= QRKod %>" alt="QR Code">-->
+            <div class="qrcode-wrap">
+                <img id="qrcode" src="<%= QRKod %>" alt="QR Code">
+            </div>
+        <% } %>
+        
+        <%- include('partials/footer') %>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

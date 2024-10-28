@@ -1,0 +1,3 @@
+Background 140021
+Boja 1 9900FF
+Bija 2 560090

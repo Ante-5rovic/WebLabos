@@ -1,0 +1,39 @@
+body {
+  margin: 0px;
+  background-color: #140021;
+}
+.index-main-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.circle-counter-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#counter {
+  font-size: 4.5rem; /* Veličina broja */
+  color: white; /* Boja broja */
+  font-weight: bold;
+  background-color: transparent; /* Prozirna pozadina */
+}
+.qrcode-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#qrcode{
+  border: 5px solid #9900FF;
+}

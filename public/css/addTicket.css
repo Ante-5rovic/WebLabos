@@ -1,0 +1,18 @@
+body {
+  margin: 0px;
+  background-color: #140021;
+  color: white;
+}
+.addticket-main-wrap {
+  min-height: 30vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#addticket-form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: start;
+}

@@ -1,0 +1,1 @@
+Dodati trigger u bazu podataka za iznad 3 ticketa

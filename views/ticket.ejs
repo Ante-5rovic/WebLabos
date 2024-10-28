@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/ticket.css" />
+</head>
+
+<body>
+    <div class="ticket-main-wrap">
+        <%- include('partials/header') %>
+        <h1>User: <%= user %></h1> <!-- Naslov "User" -->
+        <div class="data-wrap">
+            <p><strong>VATIN:</strong> <%= vatin %></p>
+            <p><strong>First Name:</strong> <%= firstName %></p>
+            <p><strong>Last Name:</strong> <%= lastName %></p>
+            <p><strong>Timestamp:</strong> <%= timestamp %></p>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+
+</body>
+
+</html>

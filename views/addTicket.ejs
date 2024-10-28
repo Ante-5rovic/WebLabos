@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/addTicket.css" />
+</head>
+<body>
+    <%- include('partials/header') %>
+        <div class="addticket-main-wrap" >
+            <form id="addticket-form">
+                <label for="vatin">VatIn:</label>
+                <input type="text" id="vatin" name="vatin" required maxlength="11" title="vatin mora imati 11 znakova">
+    
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+    
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+    
+                <button type="button" onclick="submitForm()">Login</button>
+            </form>
+        </div>
+
+    <%- include('partials/footer') %>
+    <script src="scripts/addTicket.js"></script>
+</body>
+</html>
