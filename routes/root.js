@@ -65,8 +65,8 @@ router.post("/kupnja-ulaznice", checkAuth, async (req, res) => {
 
     const uuid = await addTicket(vatin);
     try {
-      const qrCodeDataURL = await QRCode.toDataURL("/ulaznica-info/" + uuid);
-      res.render("index", { numberOfTickets: null, QRKod: + qrCodeDataURL }); //<-- TODO dohvati dobar URL
+      const qrCodeDataURL = await QRCode.toDataURL("https://weblabos1.onrender.com/ulaznica-info/" + uuid);
+      res.render("index", { numberOfTickets: null, QRKod: qrCodeDataURL }); //<-- TODO dohvati dobar URL
       console.log("QR code created");
     } catch (error) {
       console.log("QR code failed: " + error);
