@@ -47,7 +47,6 @@ router.post("/kupnja-ulaznice", checkAuth, async (req, res) => {
 
   const maxTicketsReached = await countTickets(vatin);
   if (maxTicketsReached >= 3) {
-    //<----------------- VRATI NA 3
     const ErrorType = "Already generated maximum number of tickets on this OIB";
     res.status(400);
     if (req.accepts("html")) {
@@ -66,7 +65,7 @@ router.post("/kupnja-ulaznice", checkAuth, async (req, res) => {
     const uuid = await addTicket(vatin);
     try {
       const qrCodeDataURL = await QRCode.toDataURL("https://weblabos1.onrender.com/ulaznica-info/" + uuid);
-      res.render("index", { numberOfTickets: null, QRKod: qrCodeDataURL }); //<-- TODO dohvati dobar URL
+      res.render("index", { numberOfTickets: null, QRKod: qrCodeDataURL }); 
       console.log("QR code created");
     } catch (error) {
       console.log("QR code failed: " + error);
@@ -106,7 +105,6 @@ router.get("/ulaznica-info/:id", requiresAuth(), async (req, res) => {
 
 router.get("/getToken", async (req, res) => {
   try {
-    // Define your options for axios
     const options = {
       method: "POST",
       url: "https://dev-tor07tfe57trlp2l.us.auth0.com/oauth/token",
@@ -123,10 +121,10 @@ router.get("/getToken", async (req, res) => {
     const token = tokenResponse.data;
 
     console.log("Token received:", token);
-    res.send(token); // Send token data to the client
+    res.send(token); 
   } catch (err) {
     console.error("Error fetching token:", err);
-    res.status(500).send({ error: "Failed to fetch token" }); // Send error response to client
+    res.status(500).send({ error: "Failed to fetch token" }); 
   }
 });
 
